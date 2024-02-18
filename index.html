@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <meta name="author" content="Renzo Crisanto" />
+    <link rel="shortcut icon" href="Imágenes/Logo.png" type="image/x-icon">
+    <!-- Estilos Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Fuente personalizada -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="Estilos/index.css">
+</head>
+
+<body>
+    <header>
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <!-- Logo de la tienda -->
+                    <img class="rounded-circle" src="Imágenes/Logo.png" alt="Tu Tienda Logo" height="50">
+                </a>
+                <!-- Botón de hamburguesa para dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Ítems del menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Perfil
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="perfil.html">Mis datos</a>
+                                <a class="dropdown-item" href="cambiarclave.html">Cambio Clave</a>
+                                <a class="dropdown-item" href="registro.html">Registrarse</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="catalogo.html">Catálogo</a>
+                        </li>
+                    </ul>
+                    <!-- Íconos de redes sociales -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-3">
+        <!-- Carrusel de imágenes como banner -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="Imágenes/promo-banner-healthy-lifestyle-natural-260nw-1996820612.webp" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="Imágenes/flyer-design-items-clothing-shopping-260nw-1780534835.webp"
+                        alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="Imágenes/101660894-banner-venta-de-verano-descuentos-precio-especial-oferta-especial-publicidad-de-tienda-y-boutique.jpg"
+                        alt="Third slide">
+                </div>
+            </div>
+        </div>
+        <section id="banner" class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="font-weight: bold" class="text-center">Nuestros Productos</h2>
+                    <p class="text-center">Descubre nuestra amplia variedad de productos de alta calidad que se adaptan
+                        a tus necesidades.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2 style="font-weight: bold" class="text-center">Descuentos Especiales</h2>
+                    <p class="text-center">No te pierdas nuestras promociones y descuentos exclusivos. ¡Aprovecha ahora!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="catalogo.html" class="btn btn-primary" style="font-weight: bold">Ver Catálogo</a>
+                </div>
+            </div>
+        </section>
+        <section id="testimonios" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4" style="font-weight: bold">Testimonios de Clientes</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Excelente calidad y servicio al cliente. ¡Muy recomendado!"</p>
+                                <p class="card-text"><strong>- María Sánchez</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Me encanta la variedad de productos que ofrecen. Siempre encuentro
+                                    lo que necesito."</p>
+                                <p class="card-text"><strong>- Juan Pérez</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Entrega rápida y excelente atención al cliente. ¡Volveré a
+                                    comprar!"</p>
+                                <p class="card-text"><strong>- Luis Rodríguez</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="novedades" class="container mt-5 mb-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center" style="font-weight: bold">Últimas Novedades</h2>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Imágenes/1822045.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevo Producto 1</h5>
+                            <p class="card-text">Conoce nuestro último producto y descubre sus características
+                                increíbles.</p>
+                            <a href="#" class="btn btn-primary">Más Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Imágenes/1822045.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevo Producto 2</h5>
+                            <p class="card-text">Descubre nuestro nuevo lanzamiento y sorpréndete con su calidad y
+                                diseño.</p>
+                            <a href="#" class="btn btn-primary">Más Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Imágenes/1822045.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevo Producto 3</h5>
+                            <p class="card-text">Explora nuestra última incorporación y enamórate de sus
+                                características.</p>
+                            <a href="#" class="btn btn-primary">Más Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container">
+            <!-- Enlaces de navegación -->
+            <ul class="nav justify-content-center mb-4">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+            <!-- Contenedor de logo y datos de la tienda -->
+            <div class="row align-items-center justify-content-between">
+                <!-- Logo -->
+                <div class="col-md-auto text-center mb-3 mb-md-0">
+                    <img class="rounded-circle" src="Imágenes/Logo.png" alt="Tu Tienda Logo" height="80">
+                </div>
+                <!-- Datos de la tienda -->
+                <div class="col-md-auto text-center">
+                    <p class="mb-1">© 2024 Tu Tienda Online</p>
+                    <p class="mb-1">Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+                    <p class="mb-0">Teléfono: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

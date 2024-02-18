@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión</title>
+    <meta name="author" content="Renzo Crisanto" />
+    <link rel="shortcut icon" href="Imágenes/Logo.png" type="image/x-icon">
+    <!-- Estilos Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="Estilos/registro.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div id="registro">
+                    <form id="registroForm">
+                        <div class="card-header">
+                            <h3 id="formTitle" class="font-weight-bold">Registro</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombreRegistro" class="font-weight-bold">Nombre</label>
+                            <input type="text" class="form-control" id="nombreRegistro" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailRegistro" class="font-weight-bold">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="emailRegistro" required>
+                            <small id="emailError" class="text-danger" style="display: none;">Por favor ingresa un
+                                correo
+                                electrónico válido.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordRegistro" class="font-weight-bold">Contraseña</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="passwordRegistro" required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="verPasswordRegistro"
+                                        onclick="verPassword('passwordRegistro', 'verPasswordRegistro')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <small id="passwordError" class="text-danger" style="display: none;">La contraseña debe
+                                tener
+                                al menos 8 caracteres.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                    </form>
+                    <hr>
+                    <p class="text-center link">¿Ya tienes una cuenta? <a href="#"
+                            onclick="mostrarInicioSesion()">Iniciar
+                            sesión</a></p>
+                </div>
+
+                <div id="inicioSesion" style="display: none;">
+                    <form id="inicioSesionForm"> <!-- Añadido el id "inicioSesionForm" al formulario -->
+                        <div class="card-header">
+                            <h3 id="formTitle" class="font-weight-bold">Inicio de Sesión</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailInicio" class="font-weight-bold">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="emailInicio" required>
+                            <small id="emailInicioError" class="text-danger" style="display: none;">Por favor ingresa un
+                                correo electrónico válido.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordInicio" class="font-weight-bold">Contraseña</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="passwordInicio" required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="verPasswordInicio"
+                                        onclick="verPassword('passwordInicio', 'verPasswordInicio')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <small id="passwordInicioError" class="text-danger" style="display: none;">La contraseña
+                                debe tener al menos 8 caracteres.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                    </form>
+                    <hr>
+                    <p class="text-center link">¿No tienes una cuenta? <a href="#"
+                            onclick="mostrarRegistro()">Regístrate</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn btn-regresar font-weight-bold">Regresar</a>
+
+    <!-- Scripts JavaScript -->
+    <script src="Scripts/registrarse.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>

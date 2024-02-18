@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <meta name="author" content="Renzo Crisanto" />
+    <link rel="shortcut icon" href="Imágenes/Logo.png" type="image/x-icon">
+    <!-- Estilos Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Fuente personalizada -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="Estilos/index.css">
+</head>
+
+<body>
+    <div id="customAlert" class="custom-alert">
+        <i class="fas fa-check"></i> <span id="alertMessage"></span>
+    </div>
+
+    <header>
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container">
+                <a class="navbar-brand">
+                    <!-- Logo de la tienda -->
+                    <img class="rounded-circle" src="Imágenes/Logo.png" alt="Tu Tienda Logo" height="50">
+                </a>
+                <!-- Botón de hamburguesa para dispositivos móviles -->
+                <button class="navbar-toggler" type="button btn-add-cart" data-toggle="collapse btn-add-cart"
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Ítems del menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Perfil
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="perfil.html">Mis datos</a>
+                                <a class="dropdown-item" href="cambiarclave.html">Cambio Clave</a>
+                                <a class="dropdown-item" href="registro.html">Registrarse</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="catalogo.html">Catálogo</a>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="cart-container">
+                        <img onclick="showCart(this)" class="cart" src="Imágenes/cart.png" alt="Carrito de compras">
+                        <p class="count-product">0</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container mt-3">
+        <h2 class="text-center mb-4 catalog-title">Catálogo de Productos</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card product-card border-primary">
+                    <img src="Imágenes/1822045.png" class="card-img-top mt-2" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title product-title text-primary title text-center">Producto 1</h5>
+                        <p class="card-text text-center">Descripción detallada del producto 1. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="card-text product-price price text-center">Precio: 10$</p>
+                        <a class="btn btn-add-cart d-block mx-auto" data-id="1">
+                            <i class="fas fa-shopping-cart btn-icon"></i>Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card product-card border-primary">
+                    <img src="Imágenes/1822045.png" class="card-img-top mt-2" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title product-title text-primary title text-center">Producto 2</h5>
+                        <p class="card-text text-center">Descripción detallada del producto 1. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="card-text product-price price text-center">Precio: 20$</p>
+                        <a class="btn btn-add-cart d-block mx-auto" data-id="2">
+                            <i class="fas fa-shopping-cart btn-icon"></i>Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card product-card border-primary">
+                    <img src="Imágenes/1822045.png" class="card-img-top mt-2" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title product-title text-primary title text-center">Producto 3</h5>
+                        <p class="card-text text-center">Descripción detallada del producto 1. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="card-text product-price price text-center">Precio: 30$</p>
+                        <a class="btn btn-add-cart d-block mx-auto" data-id="3">
+                            <i class="fas fa-shopping-cart btn-icon"></i>Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card product-card border-primary">
+                    <img src="Imágenes/1822045.png" class="card-img-top mt-2" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title product-title text-primary title text-center">Producto 4</h5>
+                        <p class="card-text text-center">Descripción detallada del producto 1. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="card-text product-price price text-center">Precio: 40$</p>
+                        <a class="btn btn-add-cart d-block mx-auto" data-id="4">
+                            <i class="fas fa-shopping-cart btn-icon"></i>Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card product-card border-primary">
+                    <img src="Imágenes/1822045.png" class="card-img-top mt-2" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title product-title text-primary title text-center">Producto 5</h5>
+                        <p class="card-text text-center">Descripción detallada del producto 1. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="card-text product-price price text-center">Precio: 50$</p>
+                        <a class="btn btn-add-cart d-block mx-auto" data-id="5">
+                            <i class="fas fa-shopping-cart btn-icon"></i>Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card product-card border-primary">
+                    <img src="Imágenes/1822045.png" class="card-img-top mt-2" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title product-title text-primary title text-center">Producto 6</h5>
+                        <p class="card-text text-center">Descripción detallada del producto 1. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="card-text product-price price text-center">Precio: 60$</p>
+                        <a class="btn btn-add-cart d-block mx-auto" data-id="6">
+                            <i class="fas fa-shopping-cart btn-icon"></i>Agregar al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrito de compras -->
+    <div class="cart-products" id="products-id">
+        <p class="close-btn" onclick="closeBtn()"><i class="fas fa-times fa-lg"></i></p>
+        <h3 class="font-weight-bold text-center">Mi Carrito</h3>
+        <div class="card-items">
+            <!-- Contenido del carrito -->
+        </div>
+        <h2>Total: $<strong class="price-total">0</strong></h2>
+        <!-- Botón "Vaciar" -->
+        <button class="btn btn-danger btn-sm mr-2" onclick="clearCart()">
+            <i class="fas fa-trash-alt"></i> Vaciar
+        </button>
+        <!-- Botón "Pagar" con clase btn-sm -->
+        <button class="btn btn-primary btn-sm" onclick="openPaymentModal()">
+            <i class="fas fa-credit-card"></i> Pagar
+        </button>
+    </div>
+
+    <!-- Modal de pago -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-icon" onclick="closePaymentModal()"><i class="fas fa-times fa-lg"></i></span>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="purchase-details">
+                        <h2>Detalles de Compra</h2>
+                        <ul class="product-list">
+                            <!-- Aquí se mostrarán los detalles de la compra -->
+                        </ul>
+                        <div class="actions">
+                            <button id="empty-cart">Vaciar Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-center">Pagar</h2>
+                    <div class="payment-form">
+                        <!-- Formulario de pago -->
+                        <form id="payment-form">
+                            <!-- Contenido del formulario -->
+                            <div class="form-group">
+                                <label for="card-name">Titular de la Tarjeta:</label>
+                                <div class="input-icon">
+                                    <input type="text" id="card-name" name="card-name" class="form-control"
+                                        placeholder="Titular de la Tarjeta" required autocomplete="off">
+                                    <i style="display: none" class="fas fa-check-circle" id="card-name-check"></i>
+                                    <i class="fas fa-times-circle" id="card-name-error"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-number">Número de tarjeta:</label>
+                                <div class="input-icon">
+                                    <input type="text" id="card-number" name="card-number" class="form-control"
+                                        placeholder="1234 5678 9012 3456" required autocomplete="off">
+                                    <i style="display: none" class="fas fa-check-circle" id="card-number-check"></i>
+                                    <i class="fas fa-times-circle" id="card-number-error"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="expiry-date">Expiración:</label>
+                                    <div class="input-icon">
+                                        <input type="text" id="expiry-date" name="expiry-date" class="form-control"
+                                            placeholder="MM/YY" required autocomplete="off">
+                                        <i style="display: none" class="fas fa-check-circle" id="expiry-date-check"></i>
+                                        <i class="fas fa-times-circle" id="expiry-date-error"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="cvv">CVV:</label>
+                                    <div class="input-icon">
+                                        <input type="text" id="cvv" name="cvv" class="form-control" placeholder="CVV"
+                                            required autocomplete="off">
+                                        <i style="display: none" class="fas fa-check-circle" id="cvv-check"></i>
+                                        <i class="fas fa-times-circle" id="cvv-error"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Pagar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container">
+            <!-- Enlaces de navegación -->
+            <ul class="nav justify-content-center mb-4">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+            <!-- Contenedor de logo y datos de la tienda -->
+            <div class="row align-items-center justify-content-between">
+                <!-- Logo -->
+                <div class="col-md-auto text-center mb-3 mb-md-0">
+                    <img class="rounded-circle" src="Imágenes/Logo.png" alt="Tu Tienda Logo" height="80">
+                </div>
+                <!-- Datos de la tienda -->
+                <div class="col-md-auto text-center">
+                    <p class="mb-1">© 2024 Tu Tienda Online</p>
+                    <p class="mb-1">Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+                    <p class="mb-0">Teléfono: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="Scripts/carrito.js"></script>
+    <script src="Scripts/validacionTarjeta.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
